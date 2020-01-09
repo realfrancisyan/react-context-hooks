@@ -17,10 +17,19 @@ class ThemeContextProvider extends Component {
       bg: '#555'
     }
   };
+
+  toggleTheme = () => {
+    this.setState({
+      isLightTheme: !this.state.isLightTheme
+    });
+  };
+
   render() {
     return (
       // 建立 Provider，并传入 state，供子组件使用
-      <ThemeContext.Provider value={{ ...this.state }}>
+      <ThemeContext.Provider
+        value={{ ...this.state, toggleTheme: this.toggleTheme }}
+      >
         {this.props.children}
       </ThemeContext.Provider>
     );

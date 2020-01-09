@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ThemeContext } from '../contexts/themeContext';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 class Navbar extends Component {
   render() {
